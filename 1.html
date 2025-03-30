@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0px;
+            background-color: rgb(255, 255, 255);
+        }
+        #logo{
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            max-width: 50px;
+            height: auto;
+            box-shadow: none;
+            filter: none;
+
+
+        }
+        nav{
+            width: 100%;
+            background-color: rgb(216, 226, 235);
+            text-align: center;
+            padding: 10px 0px;
+            gap: 20px;
+            justify-content: space-around;
+            display: flex;
+        }
+        nav a {
+            color: rgb(0, 0, 0);
+            margin: 0px 50px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            display: inline;
+        }
+        nav a:hover{
+            color: blueviolet;
+        }
+        nav button{
+            border-radius: 20px;
+            border: black;
+            background-color: beige;
+            width: 10em;
+        }
+        nav button:hover{
+            border-radius: 15 px;
+            border: blue;
+            background-color: rgb(252, 252, 166);
+        }
+
+        section{
+            border: 3px dashed red;
+            height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 25px;
+            justify-content: space-around;
+            background-color: blueviolet;
+            flex-flow: row wrap;
+        }
+        article{
+            height: 100px;
+            background-color: aquamarine;
+            border: 1px;
+            border-radius: 20px;
+            justify-content: center;
+            text-align: center;
+            margin: 1rem 1rem 1rem 1rem;
+            box-shadow: 1px 5px 10px rgb(0, 105, 70);
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+
+        }
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 200px;
+        justify-content: center;
+        border: 1px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 1px 5px 10px black;
+        width: 40%;
+        }
+    .modal-content{
+        position: relative;
+        background-color: white;
+        margin: auto;
+        padding: 20%;
+        width: 60%;
+    }
+    </style>
+</head>
+    <header>
+        <nav>  
+            <logo>
+                <img src="Logo.png" alt="Logo" id="logo">
+            </logo>
+            <a href="#inicio">inicio</a>
+            <a href="#servicios">servicio</a>
+            <a href="#contacto">contacto</a>
+            <button>inicio</button>
+            <button id="abrirModalRegistrar">registrarse</button>
+            <div id="modalRegistrar" class="modal">
+                <div class="modal-content">
+                        <span class="cerrar">&times;</span>
+                    <form>
+                        <h1>Nombre</h1>
+                        <input type="text" name="Nombre" id="name">
+                        <h1>Edad</h1>
+                        <input type="number" name="Edad" id="age">
+                        <h1>Correo</h1>
+                        <input type="email" name="Correo" id="mail">
+                        <h1>Contraseña</h1>
+                        <input type="password" name="Contraseña" id="password">
+                </div>
+            </div>
+        </nav>
+    </header>
+<main>
+    <article></article>
+    <article></article>
+    <article></article>
+</main>
+<footer>
+
+
+</footer>
+
+
+<script>
+  onclick = function(){
+    document.getElementById('modalRegistrar').style.display="block";
+  }
+    
+</script>
